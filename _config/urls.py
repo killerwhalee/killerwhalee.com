@@ -23,3 +23,7 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('common/', include('common.urls')),
 ]
+
+handler400 = 'common.views.error400'
+handler404 = 'common.views.error404'
+handler500 = 'common.views.error500'
