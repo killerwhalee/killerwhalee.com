@@ -1,8 +1,7 @@
 from django.shortcuts import render
 
-
-def login(request):
-    return render(request, 'common/login.html')
+def logout(request):
+    pass
 
 def signup(request):
     pass
@@ -16,5 +15,5 @@ def error400(request, exception):
 def error404(request, exception):
     return render(request, 'error/404.html', {})
 
-def error500(request, exception):
+def error500(request):
     return render(request, 'error/500.html', {})
