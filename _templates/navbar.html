@@ -31,7 +31,18 @@
           </ul>
         </li>
       </ul>
-      <a class="btn btn-outline-light" href="common/login" role="button">Login</a>
+      {% if user.is_authenticated %}
+      <div class="nav-item">
+        <p class="text-white mb-0" href="/">Welcome back,</p>
+      </div>
+      <div class="nav-item px-2">
+        <a class="nav-link text-white fw-bold" href="/">{{ user.username }}</a>
+      </div>
+      <a class="btn btn-outline-light" href="{% url 'common:logout' %}" role="button">Logout</a>
+      {% else %}
+      <a class="btn btn-success mx-1" href="{% url 'common:login' %}" role="button">Login</a>
+      <a class="btn btn-outline-light" href="{% url 'common:signup' %}" role="button">Sign up</a>
+      {% endif %}
     </div>
   </div>
 </nav>
