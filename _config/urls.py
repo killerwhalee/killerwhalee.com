@@ -23,6 +23,7 @@ urlpatterns = [
     path('', lambda request: redirect('home/')),
     path('home/', include('home.urls')),
     path('common/', include('common.urls')),
+    path('gallery/', include('gallery.urls')),
 ]
 
 handler400 = 'common.views.error400'
