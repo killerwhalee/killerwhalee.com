@@ -7,4 +7,4 @@ class Explore(models.Model):
     explore_title = models.CharField("Title of explore", max_length=32)
     explore_author = models.ForeignKey(User, verbose_name="Author of the Explore", on_delete=models.PROTECT)
     explore_date_created = models.DateTimeField("Date when the explore created", auto_now=False, auto_now_add=True)
-    explore_detail = models.TextField("Detail of explore", max_length=256)
+    explore_description = models.TextField("Description of explore", max_length=256)
