@@ -3,9 +3,6 @@
     <a class="navbar-brand" href="/">
       <img src="/static/image/logo-white.png" alt="" width="98" height="19">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -68,22 +65,24 @@
             <input
               type="text"
               class="form-control rounded-3"
-              id="floatingInput"
+              id="Username"
               name="username"
+              placeholder="Username"
               value="{{ form.username.value|default_if_none:'' }}"
             />
-            <label for="floatingInput">Username</label>
+            <label for="Username">Username</label>
           </div>
           
           <div class="form-floating mb-3">
             <input
               type="password"
               class="form-control rounded-3"
-              id="floatingPassword"
+              id="Password"
               name="password"
+              placeholder="Password"
               value="{{ form.password.value|default_if_none:'' }}"
             />
-            <label for="floatingPassword">Password</label>
+            <label for="Password">Password</label>
           </div>
   
           <div class="checkbox mb-3">
@@ -118,54 +117,54 @@
           <div class="form-floating mb-3">
             <input
               type="text"
-              class="form-control form-control-sm"
-              id="floatingInput"
+              class="form-control rounded-3"
+              id="Username"
               name="username"
               placeholder="Username"
               value="{{ form.username.value|default_if_none:'' }}"
             />
-            <label for="floatingInput">Username</label>
+            <label for="Username">Username</label>
           </div>
 
           <div class="form-floating mb-3">
             <input
               type="email"
-              class="form-control form-control-sm"
-              id="floatingInput"
+              class="form-control rounded-3"
+              id="Email"
               name="email"
               placeholder="username@example.com"
               value="{{ form.email.value|default_if_none:'' }}"
             />
-            <label for="floatingInput">Email Address</label>
+            <label for="Email">Email Address</label>
           </div>
 
           <div class="form-floating mb-3">
             <input
               type="password"
               class="form-control rounded-3"
-              id="floatingPassword"
+              id="Password1"
               name="password1"
               placeholder="Password"
               value="{{ form.password1.value|default_if_none:'' }}"
             />
-            <label for="floatingPassword">Password</label>
+            <label for="Password1">Password</label>
           </div>
 
           <div class="form-floating mb-3">
             <input
               type="password"
               class="form-control rounded-3"
-              id="floatingPassword"
+              id="Password2"
               name="password2"
               placeholder="Confirm Password"
               value="{{ form.password2.value|default_if_none:'' }}"
             />
-            <label for="floatingPassword">Confirm Password</label>
+            <label for="Password2">Confirm Password</label>
           </div>
 
           <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
           <small class="text-muted">By clicking Sign up, you agree to the 
-            <a href="#">
+            <a href="{% url 'common:terms' %}">
               terms of use.
             </a>
           </small>
