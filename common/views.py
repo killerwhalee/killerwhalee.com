@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from common.forms import UserForm
+from .forms import UserForm
 
 def logout(request):
     pass
@@ -18,6 +18,9 @@ def signup(request):
     else:
         print("???")
     return redirect('/')
+
+def terms(request):
+    return render(request, 'common/terms.html')
 
 # Error handling
 
