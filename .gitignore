@@ -59,6 +59,9 @@ base-*.py
 admin/
 migrations/
 
+# Server Image Folder
+_static/image/
+
 # Scrapy stuff:
 .scrapy
 
