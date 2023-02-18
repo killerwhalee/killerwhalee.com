@@ -26,6 +26,11 @@ urlpatterns = [
     path('gallery/', include('gallery.urls')),
 ]
 
+from django.conf import settings
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 handler400 = 'common.views.error400'
 handler404 = 'common.views.error404'
 handler500 = 'common.views.error500'

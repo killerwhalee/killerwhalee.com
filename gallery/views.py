@@ -18,7 +18,7 @@ def explore_gallery(request):
 @login_required(login_url="/common/login")
 def explore_create(request):
     if request.method == "POST":
-        form = ExploreForm(request.POST)
+        form = ExploreForm(request.POST, request.FILES)
         if form.is_valid():
             explore = form.save(commit=False)
             explore.explore_author = request.user
