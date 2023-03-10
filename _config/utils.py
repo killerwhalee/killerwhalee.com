@@ -11,6 +11,5 @@ def uuid_filepath(instance, filename):
     return '/'.join([
         app_name,
         model_name,
-        uuid_name[:2],
         uuid_name + extension,
     ])
