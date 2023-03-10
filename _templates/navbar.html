@@ -1,19 +1,46 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="/static/image/logo-white.png" alt="" width="98" height="19">
     </a>
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarTogglerDemo02" 
+      aria-controls="navbarTogglerDemo02" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a 
+            class="nav-link active" 
+            href="/"
+          >
+            Home
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/gallery">Gallery</a>
+          <a 
+            class="nav-link active" 
+            href="/gallery"
+          >
+            Gallery
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/killerwhalee/kaist-world">Github</a>
+          <a 
+            class="nav-link" 
+            href="https://github.com/killerwhalee/kaist-world"
+            target="_blank"
+          >
+            Github
+          </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,13 +54,21 @@
         </li>
       </ul>
       {% if user.is_authenticated %}
-      <div class="nav-item">
-        <p class="text-white mb-0 me-1" href="/">Welcome back,</p>
+      <div class="nav-item my-2">
+        <p class="text-white mb-0 me-1">
+          Welcome back,
+          <a class="text-white fw-bold me-3" href="{% url 'common:profile' user.username %}">
+            {{ user.username }}
+          </a>
+        </p>
       </div>
-      <div class="nav-item">
-        <a class="nav-link text-white fw-bold me-3" href="/profile">{{ user.username }}</a>
-      </div>
-      <a class="btn btn-outline-light" href="{% url 'common:logout' %}" role="button">Logout</a>
+      <a 
+        class="btn btn-outline-light" 
+        href="{% url 'common:logout' %}" 
+        role="button"
+      >
+        Logout
+      </a>
       {% else %}
       <button type="button" class="btn btn-success mx-1" data-bs-toggle="modal" data-bs-target="#modalLogin">
         Login
@@ -68,7 +103,7 @@
               id="Username"
               name="username"
               placeholder="Username"
-              value="{{ form.username.value|default_if_none:'' }}"
+              value="{{form.username.value|default_if_none:''}}"
             />
             <label for="Username">Username</label>
           </div>
@@ -80,7 +115,7 @@
               id="Password"
               name="password"
               placeholder="Password"
-              value="{{ form.password.value|default_if_none:'' }}"
+              value="{{form.password.value|default_if_none:''}}"
             />
             <label for="Password">Password</label>
           </div>
@@ -121,7 +156,7 @@
               id="Username"
               name="username"
               placeholder="Username"
-              value="{{ form.username.value|default_if_none:'' }}"
+              value="{{form.username.value|default_if_none:''}}"
             />
             <label for="Username">Username</label>
           </div>
@@ -133,7 +168,7 @@
               id="Email"
               name="email"
               placeholder="username@example.com"
-              value="{{ form.email.value|default_if_none:'' }}"
+              value="{{form.email.value|default_if_none:''}}"
             />
             <label for="Email">Email Address</label>
           </div>
@@ -145,7 +180,7 @@
               id="Password1"
               name="password1"
               placeholder="Password"
-              value="{{ form.password1.value|default_if_none:'' }}"
+              value="{{form.password1.value|default_if_none:''}}"
             />
             <label for="Password1">Password</label>
           </div>
@@ -157,7 +192,7 @@
               id="Password2"
               name="password2"
               placeholder="Confirm Password"
-              value="{{ form.password2.value|default_if_none:'' }}"
+              value="{{form.password2.value|default_if_none:''}}"
             />
             <label for="Password2">Confirm Password</label>
           </div>
