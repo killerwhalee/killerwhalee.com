@@ -37,6 +37,7 @@
                   <a href="{% url 'gallery:explore' explore.explore_id %}" class="btn btn-primary mx-1">explore!</a>
                   {% if request.user == explore.explore_author %}
                       <a href="{% url 'gallery:explore-edit' explore.explore_id %}" class="btn btn-outline-primary mx-1">edit</a>
+                      <a href="{% url 'gallery:explore-delete' explore.explore_id %}" class="btn btn-outline-danger mx-1">delete</a>
                   {% endif %}
                 </div>
                 <div class="card-footer">

@@ -15,7 +15,7 @@
                 id="Title"
                 name="explore_title"
                 placeholder="Title of Explore"
-                value="{{ form.Title.value|default_if_none:'' }}"
+                value="{{form.Title.value|default_if_none:''}}"
               />
               <label for="Title">Title of Explore</label>
             </div>
@@ -27,7 +27,7 @@
                 id="Description"
                 name="explore_description"
                 placeholder="Description of Explore"
-                value="{{ form.Description.value|default_if_none:'' }}"
+                value="{{form.Description.value|default_if_none:''}}"
               ></textarea>
               <label for="Description">Description of Explore</label>
             </div>
@@ -39,7 +39,7 @@
                   id="CoverImage"
                   name="explore_cover_image"
                   placeholder="Upload Cover Image for Explore"
-                  value="{{ form.CoverImage.value|default_if_none:'' }}"
+                  value="{{form.CoverImage.value|default_if_none:''}}"
                 >
               </div>
             </div>
