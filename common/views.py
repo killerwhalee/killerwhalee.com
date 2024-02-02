@@ -22,6 +22,9 @@ def signup(request):
 def terms(request):
     return render(request, 'common/terms.html')
 
+def profile(request, username):
+    return redirect("/")
+
 # Error handling
 
 def error400(request, exception):
