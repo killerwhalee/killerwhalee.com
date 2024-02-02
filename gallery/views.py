@@ -9,7 +9,8 @@ from .forms import ExploreForm
 
 # Create your views here.
 def explore(request, explore_id):
-    return HttpResponse(explore_id)
+    explore = f'gallery/explore/{explore_id}.html'
+    return render(request, explore)
 
 def explore_gallery(request):
     explore_list = Explore.objects.order_by('explore_id')
@@ -35,7 +36,7 @@ def explore_edit(request, explore_id):
     arguments = {'explore': explore}
     
     if request.user != explore.explore_author:
-        message.error(request, 'You are not allowed to edit this explore!')
+        messages.error(request, 'You are not allowed to edit this explore!')
         return redirect('gallery:explore-gallery')
 
     if request.method == 'POST':
@@ -51,7 +52,7 @@ def explore_delete(request, explore_id):
     explore = Explore.objects.get(explore_id=explore_id)
 
     if request.user != explore.explore_author:
-        message.error(request, 'You are not allowed to edit this explore!')
+        messages.error(request, 'You are not allowed to edit this explore!')
         return redirect('gallery:explore-gallery')
 
     explore.delete()
