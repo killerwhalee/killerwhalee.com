@@ -1,15 +1,15 @@
-# kaist-world
+# killerwhalee.com
 
-kaist-world
+killerwhalee.com
 Developed and Maintained by `CHAEMIN LIM`
 
 ## Introduction
 
-kaist-world is repository of killerwhalee's personal website.
-You can see website available on https://kaist-world.net/
+Repository where you can see all wierd things I did.
+You can see those things on https://killerwhalee.com/
 
 ## Contact Us
 
-If you have problem using my website or want to suggest great idea, feel free to contact us.
+If you have problem using my website or want to suggest great idea, feel free to contact me.
 
 `killerwhalee@kaist.ac.kr`
