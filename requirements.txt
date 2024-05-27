@@ -1,0 +1,9 @@
+# Django dependency
+django==4.2.11
+django-environ==0.11.2
+
+# Django indirect dependency
+gunicorn==22.0.0
+pillow==10.3.0
+requests==2.32.2
+python-dotenv==1.0.0
