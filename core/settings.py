@@ -14,7 +14,11 @@ Configured by killerwhalee
 """
 
 from pathlib import Path
-import os
+import dotenv, os
+
+# Load Environment Variables
+
+dotenv.load_dotenv()
 
 # Host Name
 
