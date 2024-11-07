@@ -40,7 +40,7 @@ DEBUG = bool(int(os.environ.get("DJANGO_DEBUG", 0)))
 
 # Allowed Hosts
 
-ALLOWED_HOSTS = [f"*.{HOST_NAME}", "localhost"]
+ALLOWED_HOSTS = [f"*.{HOST_NAME}", "localhost", "127.0.0.1"]
 
 
 # Application Definition
