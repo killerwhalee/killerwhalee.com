@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect, HttpResponse
+from django.shortcuts import render
 
 urlpatterns = [
-    # Admin page
+    # Admin url
     path("admin/", admin.site.urls),
-    # Root url
-    path("", lambda _: HttpResponse("Welcome to killerwhalee.com")),
-    # User applications
+    # Home page
+    path("", include("home.urls")),
+    # User app url
 ]
 
 handler400 = "core.exceptions.bad_request"

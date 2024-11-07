@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  {% include "head.html" %}
+</head>
+
+<body>
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+      <h1 class="display-1 fw-bold">
+        범고래닷컴!
+      </h1>
+      <p class="fs-3">
+        <span class="text-danger">주의!</span>
+        이상한 프로젝트가 많습니다
+      </p>
+      <p class="lead">
+        저는 경고했습니다.
+      </p>
+      <a href="{% url 'home:index' %}" class="btn btn-primary">
+        위험을 불사하고 접속
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
