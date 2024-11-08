@@ -8,6 +8,7 @@ urlpatterns = [
     # User applications
     path("", include("home.urls")),
     path("user", include("user.urls")),
+    path("projects/", include("projects.urls")),
 ]
 
 handler400 = "core.exceptions.bad_request"

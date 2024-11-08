@@ -15,7 +15,3 @@ def index(request):
     context = {"fact": fact}
 
     return render(request, "home/index.html", context)
-
-
-def projects(request):
-    return render(request, "home/projects.html")

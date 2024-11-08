@@ -7,5 +7,4 @@ app_name = "home"
 urlpatterns = [
     path("", views.splash, name="splash"),
     path("home", views.index, name="index"),
-    path("projects", views.projects, name="projects"),
 ]
