@@ -4,7 +4,12 @@
       범고래닷컴!
     </a>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
           <a class="nav-link active" href="#">
@@ -36,10 +41,10 @@
         로그아웃
       </a>
       {% else %}
-      <a type="button" class="btn btn-sm btn-success mx-1">
+      <a class="btn btn-sm btn-success mx-1" href="{% url 'home:login' %}">
         로그인
       </a>
-      <a type="button" class="btn btn-sm btn-outline-light mx-1">
+      <a class="btn btn-sm btn-outline-light mx-1" href="#">
         회원가입
       </a>
       {% endif %}
