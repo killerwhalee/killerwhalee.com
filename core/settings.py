@@ -179,7 +179,11 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-STATIC_ROOT = BASE_DIR / "_static"
+if DEBUG:
+    STATICFILES_DIRS = ["_static"]
+
+else:
+    STATIC_ROOT = BASE_DIR / "_static"
 
 
 # User Media
