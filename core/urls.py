@@ -5,9 +5,9 @@ from django.shortcuts import render
 urlpatterns = [
     # Admin url
     path("admin/", admin.site.urls),
-    # Home page
+    # User applications
     path("", include("home.urls")),
-    # User app url
+    path("user", include("user.urls")),
 ]
 
 handler400 = "core.exceptions.bad_request"

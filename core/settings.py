@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # User defined applications
     "home",
+    "user",
 ]
 
 
@@ -123,7 +124,7 @@ DATABASES = {
 
 # Customized User Model
 
-# AUTH_USER_MODEL = "user.User"
+AUTH_USER_MODEL = "user.User"
 
 
 # Password Validation
@@ -152,9 +153,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Registration
 # Redirect to Root for default.
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "home:index"
 
-LOGOUT_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "home:index"
 
 
 # Internationalization
