@@ -11,4 +11,8 @@ urlpatterns = [
         "interactive",
         include("projects.interactive.urls"),
     ),
+    path(
+        "omok",
+        include("projects.omok.urls"),
+    ),
 ]
