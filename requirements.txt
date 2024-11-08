@@ -1,5 +1,5 @@
 # Django dependency
-django==4.2.11
+django==5.1.3
 django-environ==0.11.2
 
 # Django indirect dependency
