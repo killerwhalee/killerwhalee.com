@@ -50,6 +50,8 @@ ALLOWED_HOSTS = [f".{HOST_NAME}", "localhost", "127.0.0.1"]
 # Application Definition
 
 INSTALLED_APPS = [
+    # Third-party applications
+    "daphne",
     # System built-in applications
     "django.contrib.admin",
     "django.contrib.auth",
@@ -60,6 +62,8 @@ INSTALLED_APPS = [
     # User defined applications
     "home",
     "user",
+    # Project applications
+    "projects.interactive",
 ]
 
 
@@ -103,6 +107,11 @@ TEMPLATES = [
 # WSGI Setting
 
 WSGI_APPLICATION = "core.wsgi.application"
+
+
+# ASGI Setting
+
+ASGI_APPLICATION = "core.asgi.application"
 
 
 # Database Setting
