@@ -4,4 +4,6 @@ from projects.omok import views
 
 app_name = "omok"
 
-urlpatterns = []
+urlpatterns = [
+    path("", views.index, name="index"),
+]
