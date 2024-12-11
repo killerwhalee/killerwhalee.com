@@ -1,11 +1,12 @@
 from django.urls import path, include
-from django.shortcuts import render
+
+from projects import views
 
 app_name = "projects"
 
 urlpatterns = [
     # Index url
-    path("", lambda _: render(_, "home/projects.html"), name="index"),
+    path("", views.index, name="index"),
     # User applications
     path(
         "interactive",
