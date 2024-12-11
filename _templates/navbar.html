@@ -1,56 +1,89 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bolder" href="{% url 'home:index' %}">
-      범고래닷컴!
-    </a>
+	<div class="container-fluid">
+		<a
+			class="navbar-brand fw-bolder"
+			href="{% url 'home:index' %}"
+		>
+			범고래닷컴!
+		</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
-      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarToggler"
+			aria-controls="navbarToggler"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">
-            제작자
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="{% url 'projects:index' %}">
-            프로젝트
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/killerwhalee/killerwhalee.com" target="_blank">
-            깃허브
-          </a>
-        </li>
-      </ul>
-      {% if user.is_authenticated %}
-      <div class="nav-item my-2">
-        <p class="text-white mb-0 me-4">
-          안녕하세요,
-          <span class="text-white fw-bold">
-            {{ user.profile.name }}
-          </span>
-          님!
-        </p>
-      </div>
-      <form method="post" action="{% url 'user:logout' %}">
-        {% csrf_token %}
-        <button class="btn btn-sm btn-outline-light" type="submit">
-          로그아웃
-        </button>
-      </form>
-      {% else %}
-      <a class="btn btn-sm btn-success mx-1" href="{% url 'user:login' %}">
-        로그인
-      </a>
-      <a class="btn btn-sm btn-outline-light mx-1" href="{% url 'user:signup' %}">
-        회원가입
-      </a>
-      {% endif %}
-    </div>
-  </div>
+		<div
+			class="collapse navbar-collapse"
+			id="navbarToggler"
+		>
+			<ul class="navbar-nav me-auto mb-2 mb-md-0">
+				<li class="nav-item">
+					<a
+						class="nav-link active"
+						href="#"
+					>
+						제작자
+					</a>
+				</li>
+				<li class="nav-item">
+					<a
+						class="nav-link active"
+						href="{% url 'projects:index' %}"
+					>
+						프로젝트
+					</a>
+				</li>
+				<li class="nav-item">
+					<a
+						class="nav-link"
+						href="https://github.com/killerwhalee/killerwhalee.com"
+						target="_blank"
+					>
+						깃허브
+					</a>
+				</li>
+			</ul>
+			{% if user.is_authenticated %}
+			<div class="nav-item my-2">
+				<p class="text-white mb-0 me-4">
+					안녕하세요,
+					<span class="text-white fw-bold"> {{ user.profile.name }} </span>
+					님!
+				</p>
+			</div>
+			<form
+				method="post"
+				action="{% url 'user:logout' %}"
+			>
+				{% csrf_token %}
+				<button
+					class="btn btn-sm btn-outline-light"
+					type="submit"
+				>
+					로그아웃
+				</button>
+			</form>
+			{% else %}
+			<a
+				class="btn btn-sm btn-success mx-1"
+				href="{% url 'user:login' %}"
+			>
+				로그인
+			</a>
+			<a
+				class="btn btn-sm btn-outline-light mx-1"
+				href="{% url 'user:signup' %}"
+			>
+				회원가입
+			</a>
+			{% endif %}
+		</div>
+	</div>
 </nav>

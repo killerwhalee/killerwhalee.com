@@ -1,22 +1,25 @@
 {% extends 'base.html' %} {% block contents %}
 <main class="flex-shrink-0">
-  <div class="container my-4">
-    <!-- 안녕! 페이지 -->
-    <div class="p-4 mb-4 text-bg-dark rounded-3">
-      <div class="container-fluid">
-        <h1 class="display-5 fw-bold mb-4">반갑습니다!</h1>
-        <p class="fs-5 mb-4">
-          <span class="fw-bolder">범고래닷컴!</span>
-          은 제가 지금까지 진행했던 크고 작은 프로젝트를 모아 둔
-          하나의 작은 과제전 사이트입니다. <br />
-          시시할지도 모르겠지만, 재미있는 프로젝트도 많으니 돌아보면서
-          구경해보는 건 어떨까요?
-        </p>
-        <p class="mb-4">재미있는 사실: {{ fact }}</p>
-        <a class="btn btn-primary fw-bold" href="{% url 'projects:index' %}">구경하기!</a>
-      </div>
-    </div>
-
-  </div>
+	<div class="container my-4">
+		<!-- 안녕! 페이지 -->
+		<div class="p-4 mb-4 text-bg-dark rounded-3">
+			<div class="container-fluid">
+				<h1 class="display-5 fw-bold mb-4">반갑습니다!</h1>
+				<p class="fs-5 mb-4">
+					<span class="fw-bolder">범고래닷컴!</span>
+					은 제가 지금까지 진행했던 크고 작은 프로젝트를 모아 둔 하나의 작은
+					과제전 사이트입니다. <br />
+					시시할지도 모르겠지만, 재미있는 프로젝트도 많으니 돌아보면서
+					구경해보는 건 어떨까요?
+				</p>
+				<p class="mb-4">재미있는 사실: {{ fact }}</p>
+				<a
+					class="btn btn-primary fw-bold"
+					href="{% url 'projects:index' %}"
+					>구경하기!</a
+				>
+			</div>
+		</div>
+	</div>
 </main>
 {% endblock %}
