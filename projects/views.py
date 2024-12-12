@@ -1,17 +1,10 @@
 from django.shortcuts import render
 
-from pathlib import Path
-import os
+from projects.utils import list_projects
 
 
 def index(request):
-    # Get project name from project directory
-    project_dir = Path(__file__).resolve().parent
-    projects = [
-        path
-        for path in os.listdir(project_dir)
-        if os.path.isdir(project_dir / path) and path != "__pycache__"
-    ]
+    projects = list_projects()
 
     context = {"projects": projects}
     print(context)

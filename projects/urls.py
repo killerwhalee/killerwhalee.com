@@ -1,19 +1,18 @@
 from django.urls import path, include
 
 from projects import views
+from projects.utils import list_projects
 
 app_name = "projects"
 
-urlpatterns = [
-    # Index url
-    path("", views.index, name="index"),
-    # User applications
+# Construct url pattern for each projects
+projects_url = [
     path(
-        "interactive",
-        include("projects.interactive.urls"),
-    ),
-    path(
-        "omok",
-        include("projects.omok.urls"),
-    ),
+        f"{project}/",
+        include(f"projects.{project}.urls"),
+    )
+    for project in list_projects()
 ]
+
+# Construct url patterns
+urlpatterns = [path("", views.index, name="index"), *projects_url]
