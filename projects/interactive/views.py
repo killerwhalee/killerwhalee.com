@@ -13,8 +13,8 @@ def index(request):
 
         return redirect("projects:interactive:room", room_name)
 
-    return render(request, "interactive/index.html")
+    return render(request, "projects/interactive/index.html")
 
 
 def room(request, room_name):
-    return render(request, "interactive/room.html", {"room_name": room_name})
+    return render(request, "projects/interactive/room.html", {"room_name": room_name})
