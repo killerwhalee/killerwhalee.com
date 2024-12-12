@@ -3,10 +3,6 @@
 	<head>
 		<!-- Head -->
 		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1"
-		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.simplecss.org/simple.min.css"
@@ -19,18 +15,13 @@
 		<!-- /Head -->
 	</head>
 
-	<body>
+	<body class="d-flex flex-column h-100">
 		<!-- Header -->
 		<header></header>
 		<!-- /Header -->
 
 		<!--  Main  -->
-		<main>
-			<h1>잠시만요!</h1>
-			<p>현재 서버는 점검 중입니다.</p>
-			<p>최대한 빠르게 오픈하도록 하겠습니다.</p>
-			<button>눌러도 아무 일도 안 일어나는 버튼</button>
-		</main>
+		{% block main %} {% endblock main %}
 		<!--  /Main  -->
 
 		<!-- Footer -->

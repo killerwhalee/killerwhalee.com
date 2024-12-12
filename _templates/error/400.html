@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		{% include "head.html" %}
-	</head>
-
-	<body>
-		<div class="d-flex align-items-center justify-content-center vh-100">
-			<div class="text-center">
-				<h1 class="display-1 fw-bold">이런!</h1>
-				<p class="fs-3">URL에 문제가 있어 보입니다...</p>
-				<p class="lead">URL을 다시 확인해 주세요!</p>
-			</div>
-		</div>
-	</body>
-</html>
+{% extends "base_error.html" %} {% block main %}
+<main>
+	<h1>이런!</h1>
+	<p>URL에 문제가 있어 보입니다...</p>
+	<p>URL을 다시 확인해 주세요!</p>
+	<a
+		class="button"
+		href="{% url 'home:index' %}"
+	>
+		홈으로 돌아가기
+	</a>
+</main>
+{% endblock main %}

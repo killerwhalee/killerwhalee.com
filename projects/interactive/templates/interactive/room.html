@@ -1,49 +1,28 @@
-{% extends "base.html" %}{% block statics %}
-<style>
-	.scrollable-textarea {
-		height: 50vh; /* Fixed height */
-		overflow-y: scroll; /* Enable vertical scroll */
-		resize: none; /* Disable manual resizing */
-	}
-</style>
-{% endblock statics %}{% block contents %}
+{% extends "base.html" %}{% block main %}
 <!-- Chat -->
-<div class="card rounded-3">
-	<div class="card-header h4">
-		Welcome to <span id="room-name">{{room_name}}</span>
+<main>
+	<h1>Welcome to {{ room_name }}</h1>
+	<h4>Chat Log</h4>
+	<textarea
+		id="chat-log"
+		rows="10"
+		style="resize: vertical"
+		readonly
+	></textarea>
+	<div>
+		<input
+			type="text"
+			id="chat-message-input"
+		/>
+		<button id="chat-message-submit">
+			<strong>Send</strong>
+		</button>
 	</div>
-	<div class="card-body">
-		<label
-			for="chat-log"
-			class="form-label text-secondary"
-			>Chat Log</label
-		>
-		<textarea
-			class="form-control scrollable-textarea mb-3"
-			id="chat-log"
-			readonly
-		></textarea>
-		<div class="input-group">
-			<input
-				class="form-control"
-				type="text"
-				id="chat-message-input"
-			/>
-			<button
-				class="btn btn-outline-secondary"
-				type="button"
-				id="chat-message-submit"
-			>
-				Send
-			</button>
-		</div>
-	</div>
-</div>
+</main>
 <!-- /Chat -->
-{% endblock contents %}{% block scripts %}
+{% endblock main %}{% block scripts %}
 <script>
-	const roomName = document.getElementById('room-name').textContent;
-
+	const roomName = '{{room_name}}';
 	const chatSocket = new WebSocket(
 		'ws://' + window.location.host + '/ws/chat/' + roomName + '/'
 	);
@@ -52,12 +31,14 @@
 		const data = JSON.parse(e.data);
 		const textarea = document.getElementById('chat-log');
 
-		textarea.value += data.message + '\n';
+		textarea.value += `${data.message}\n`;
 		textarea.scrollTop = textarea.scrollHeight;
 	};
 
 	chatSocket.onclose = function (e) {
-		console.error('Chat socket closed unexpectedly');
+		const textarea = document.getElementById('chat-log');
+		textarea.value += `[${getTime()}] 채팅방과의 연결이 끊어졌습니다...\n`;
+		textarea.scrollTop = textarea.scrollHeight;
 	};
 
 	document.querySelector('#chat-message-input').focus();
@@ -81,7 +62,7 @@
 		const message = messageInputDom.value;
 		chatSocket.send(
 			JSON.stringify({
-				message: `[${getTime()}] ` + message,
+				message: `[${getTime()}] ${message}`,
 			})
 		);
 		messageInputDom.value = '';

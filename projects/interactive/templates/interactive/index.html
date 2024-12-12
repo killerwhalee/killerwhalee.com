@@ -1,35 +1,34 @@
-{% extends "base.html" %} {% block contents %}
-<!-- Chat -->
-<div class="container my-3">
-	<h1 class="fw-bold mb-3 text-dark">Interactive</h1>
+{% extends "base.html" %} {% block main %}
+<main>
+	<h1>Interactive</h1>
 	<h5>모르는 사람과 대화하세요! 만날 수 있다면 말이죠.</h5>
 	<p>
-		Enter room code will send you to the room. <br />
-		To talk with friend, friend should also enter same room code.
+		채팅방 코드를 자유롭게 입력하면, 해당 코드의 방으로 이동합니다. <br />
+		친구와 대화하고 싶다면, 같은 채팅방 코드를 입력하고 접속하면 됩니다.
 	</p>
 	<p>
-		Don't worry about the data leakage. <br />
-		All data is end-to-end encrpyted and nobody, even the server won't know what
-		you're talking about.
+		데이터가 유출될 걱정은 안 하셔도 됩니다. <br />
+		모든 데이터는 암호화되어 전송되며, 서버조차도 그 내용을 알 수 없습니다.
 	</p>
+	<p>방 코드는 영문과 숫자를 조합한 값이어야 합니다.</p>
+	<ul>
+		<li>room123 <strong>(OK)</strong></li>
+		<li>WhatTheFuckIsKilometer <strong>(OK)</strong></li>
+		<li>지극히정상적인방 <strong>(non-alphabet is used)</strong></li>
+		<li>space bar <strong>(blank space is used)</strong></li>
+	</ul>
+	<p>만약 이 조건을 만족하지 않는 값을 넣는다면, 무작위 코드를 생성합니다.</p>
 	<form
 		method="post"
 		action="{% url 'projects:interactive:index' %}"
 	>
 		{% csrf_token %}
-		<div class="mb-3">
-			<input
-				type="text"
-				class="form-control rounded-3"
-				name="room"
-				placeholder="Enter room code"
-			/>
-		</div>
-		<div class="mb-0 d-grid">
-			<button class="btn btn-dark btn-ecomm rounded-3">Join Chat</button>
-		</div>
+		<input
+			type="text"
+			name="room"
+			placeholder="Enter room code"
+		/>
+		<button><strong>Join Chat</strong></button>
 	</form>
-</div>
-<!-- /Chat -->
-
-{% endblock contents %}
+</main>
+{% endblock main %}

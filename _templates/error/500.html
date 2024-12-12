@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		{% include "head.html" %}
-	</head>
-
-	<body>
-		<div class="d-flex align-items-center justify-content-center vh-100">
-			<div class="text-center">
-				<h1 class="display-1 fw-bold">으아악!</h1>
-				<p class="fs-3">서버에 문제가 있는 것 같습니다...</p>
-				<p class="lead">최대한 빠른 시일 내에 해결해 보겠습니다.</p>
-				<a
-					href="{% url 'home:index' %}"
-					class="btn btn-primary"
-				>
-					홈페이지로 돌아가기 (작동할까요?)
-				</a>
-			</div>
-		</div>
-	</body>
-</html>
+{% extends "base_error.html" %} {% block main %}
+<main>
+	<h1>으아악!</h1>
+	<p>서버에 문제가 있는 것 같습니다...</p>
+	<p>최대한 빠른 시일 내에 해결해 보겠습니다.</p>
+	<a
+		class="button"
+		href="{% url 'home:index' %}"
+	>
+		홈페이지로 돌아가기 (안 될 가능성 높음)
+	</a>
+</main>
+{% endblock main %}
