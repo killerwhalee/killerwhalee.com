@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block contents %}
+<div class="d-flex align-items-center justify-content-center vh-100">
+	<div class="text-center">
+		<h1 class="display-1 fw-bold">텅텅!</h1>
+		<p class="fs-3">아직 프로젝트에 아무 것도 없습니다.</p>
+		<p class="lead">무엇이 올라올까요?</p>
+		<a
+			href="{% url 'projects:index' %}"
+			class="btn btn-primary"
+		>
+			프로젝트 목록으로 돌아가기
+		</a>
+	</div>
+</div>
+{% endblock contents %}
