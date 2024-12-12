@@ -64,6 +64,8 @@ INSTALLED_APPS = [
     "user",
     # Project applications
     "projects.interactive",
+    "projects.omok",
+    "projects.id221",
 ]
 
 
