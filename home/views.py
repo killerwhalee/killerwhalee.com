@@ -15,3 +15,7 @@ def index(request):
     context = {"fact": fun_fact.fact}
 
     return render(request, "home/index.html", context)
+
+
+def credit(request):
+    return render(request, "home/credit.html")
