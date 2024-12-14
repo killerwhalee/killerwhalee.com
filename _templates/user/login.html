@@ -29,12 +29,14 @@
 		</div>
 	</form>
 
-	<p>
+	<div>
 		비밀번호를 잊으셨나요?
-		<a href="javascript:alert('히히 안돼');">비밀번호 초기화</a>
+		<a href="javascript:alert('그런 건 없습니다. 관리자에게 문의하세요!');"
+			>비밀번호 초기화</a
+		>
 		<br />
 		아직 회원이 아니신가요?
-		<a href="{% url 'user:signup' %}">strong</a>
-	</p>
+		<a href="{% url 'user:signup' %}">회원가입하기</a>
+	</div>
 </main>
 {% endblock main %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block main %}
+<main>
+	<section>
+		<h2>기본 계정 정보</h2>
+		<ul>
+			<li>이메일: <strong>{{ user.email }}</strong></li>
+			<li>닉네임: <strong>{{ user.profile.name }}</strong></li>
+		</ul>
+		<p class="notice">
+			닉네임 및 프로필 사진 변경 기능은 차후 추가될 예정입니다.
+		</p>
+	</section>
+
+	<section>
+		<h2>활동 기록</h2>
+		<p class="notice">
+			프로젝트 내 활동 기록이나 포인트 확인 기능은 차후 추가될 예정입니다.
+		</p>
+	</section>
+
+	<form
+		method="post"
+		action="{% url 'user:logout' %}"
+	>
+		{% csrf_token %}
+		<button type="submit"><strong>로그아웃하기🥺</strong></button>
+	</form>
+</main>
+{% endblock main %}

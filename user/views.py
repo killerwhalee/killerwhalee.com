@@ -32,22 +32,7 @@ def signup(request):
 
 @login_required(login_url="user:login")
 def profile(request):
-    form = ProfileForm()
-
-    if request.method == "POST":
-        form = ProfileForm(
-            request.POST,
-            request.FILES,
-            instance=request.user.profile,
-        )
-
-        if form.is_valid():
-            form.save()
-            return redirect("user:profile")
-
-    context = {"user": request.user, "form": form}
-
-    return render(request, "user/profile.html", context)
+    return render(request, "user/profile.html")
 
 
 # Views for Change User Password
