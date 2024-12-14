@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block main %} {% load static %}
+<main>
+	<img
+		src="{% static 'projects/id221/project-1.png' %}"
+		alt=""
+	/>
+	<h1>Your Life Deserves a Medal!</h1>
+	<article>
+		<h4>🥇 이번 학기는 금메달을 받아 마땅합니다</h4>
+		<p>
+			한 학기를 버티는 일이란 참 힘듭니다. 과제는 쌓여가고 팀플은 산으로 가고,
+			메일은 끝도 없이 옵니다. 이것들이 올림픽 종목이었다면, 금메달을 받고도
+			남았을 것입니다.
+		</p>
+		<p>
+			이런 여러분들을 위해, 4개월 동안 펼쳐지는 우리만의 작은 올림픽을 꾸려
+			보았습니다. 가장 자신 있는 종목은 무엇인가요? 여러분도 이곳에선
+			국가대표입니다!
+		</p>
+	</article>
+	<a
+		class="button"
+		href="{% url 'projects:id221:index' %}"
+		><strong>return to project list</strong></a
+	>
+</main>
+{% endblock main %}

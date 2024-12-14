@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block main %}
+<main>
+	<h1>Informational Design</h1>
+	<h5>ID stands for Informational Design!</h5>
+	<p>
+		2024년 가을학기에 3개의 정보 디자인 프로젝트를 진행했습니다.<br />
+		각 프로젝트를 구경해 보세요!
+	</p>
+	<section>
+		<article>
+			<h3>Project 1 - Small Multiples</h3>
+			<h5>Your Life Deserves a Medal!</h5>
+			<a
+				class="button"
+				href="{% url 'projects:id221:project-1' %}"
+				><strong>View!</strong></a
+			>
+		</article>
+		<article>
+			<h3>Project 2 - Infographics</h3>
+			<h5>Still, We Love Film Cameras</h5>
+			<a
+				class="button"
+				href="{% url 'projects:id221:project-2' %}"
+				><strong>View!</strong></a
+			>
+		</article>
+		<article>
+			<h3>Project 3 - Data Visualization</h3>
+			<h5>Sleepwalking</h5>
+			<a
+				class="button"
+				href="{% url 'projects:id221:project-3' %}"
+				><strong>View!</strong></a
+			>
+		</article>
+	</section>
+</main>
+{% endblock main %}

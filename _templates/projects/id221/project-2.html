@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block main %} {% load static %}
+<main>
+	<img
+		src="{% static 'projects/id221/project-2.png' %}"
+		alt=""
+	/>
+	<h1>Still, We Love Film Cameras</h1>
+	<article>
+		<h4>📷 그럼에도 우리가 필름을 사랑하는 건</h4>
+		<p>
+			디지털 카메라와 스마트폰이 보급된 현재, 필름 카메라를 사용하는 사람은 없을
+			것입니다. 무겁고, 비싸며, 확인도 바로 못 하는 필름 카메라는 정말 불편해
+			보이니까요.
+		</p>
+		<p>
+			하지만 그럼에도 필름 카메라를 사용하는 사람들이 있습니다. 그들이 그토록
+			필름을 사랑하는 이유는 무엇일까요?
+		</p>
+	</article>
+	<a
+		class="button"
+		href="{% url 'projects:id221:index' %}"
+		><strong>return to project list</strong></a
+	>
+</main>
+{% endblock main %}
