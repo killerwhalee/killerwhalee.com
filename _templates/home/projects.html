@@ -12,9 +12,9 @@
 	<section>
 		{% if projects %} {% for project in projects %}
 		<article>
-			<h2>{{project|upper}}</h2>
-			<p>Project details...</p>
-			<a href="{% url 'projects:'|add:project|add:':index' %}">
+			<h2>{{project.name|upper}}</h2>
+			<p>{{project.description}}</p>
+			<a href="{% url 'projects:'|add:project.name|add:':index' %}">
 				프로젝트로 이동
 			</a>
 		</article>

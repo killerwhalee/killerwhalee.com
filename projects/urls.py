@@ -8,8 +8,8 @@ app_name = "projects"
 # Construct url pattern for each projects
 projects_url = [
     path(
-        f"{project}/",
-        include(f"projects.{project}.urls"),
+        f"{project.name}/",
+        include(f"projects.{project.name}.urls"),
     )
     for project in list_projects()
 ]
