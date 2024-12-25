@@ -48,6 +48,7 @@ ALLOWED_HOSTS = [f".{HOST_NAME}", "localhost", "127.0.0.1"]
 
 
 # Application Definition
+from projects.utils import list_projects
 
 INSTALLED_APPS = [
     # Third-party applications
@@ -59,14 +60,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # User defined applications
+    # Base applications
     "home",
     "user",
-    # Project applications
-    "projects.interactive",
-    "projects.omok",
-    "projects.id221",
-]
+] + [f"projects.{project.name}" for project in list_projects()]
 
 
 # Middleware Setting
