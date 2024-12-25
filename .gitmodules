@@ -1,0 +1,6 @@
+[submodule "projects/interactive"]
+	path = projects/interactive
+	url = https://github.com/killerwhalee/interactive
+[submodule "projects/id221"]
+	path = projects/id221
+	url = https://github.com/killerwhalee/id221
