@@ -6,7 +6,7 @@ __pycache__/
 # Private folder
 _logs/
 _media/
-_static/admin/
+_static/
 _tests/
 
 # Environment value
