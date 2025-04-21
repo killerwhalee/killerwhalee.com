@@ -4,3 +4,6 @@
 [submodule "projects/id221"]
 	path = projects/id221
 	url = https://github.com/killerwhalee/id221
+[submodule "projects/monkey"]
+	path = projects/monkey
+	url = https://github.com/killerwhalee/monkey
