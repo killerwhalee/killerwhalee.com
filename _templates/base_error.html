@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -12,8 +13,25 @@
 			href="https://cdn.simplecss.org/simple.min.css"
 		/>
 		<link
-			rel="shortcut icon"
-			href="/favicon.ico"
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="{% static 'favicon/apple-touch-icon.png' %}"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="{% static 'favicon/favicon-32x32.png' %}"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="{% static 'favicon/favicon-16x16.png' %}"
+		/>
+		<link
+			rel="manifest"
+			href="{% static 'favicon/site.webmanifest' %}"
 		/>
 		<title>범고래닷컴!</title>
 		<!-- /Head -->
