@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>초경량 주문 키오스크 · killerwhalee</title>
+<meta name="description" content="초경량 주문 키오스크 — 노트북 한 대로 여는 행사용 주문 시스템. 브라우저에서 바로 써 보는 데모.">
+<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0D0F" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="초경량 주문 키오스크 · killerwhalee">
+<meta property="og:description" content="노트북 한 대로 여는 행사용 주문 시스템 — 브라우저에서 바로 써 보기">
+<meta property="og:url" content="https://killerwhalee.com/kiosk/">
+<link rel="canonical" href="https://killerwhalee.com/kiosk/">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="wrap top">
+  <a class="mark" href="/" aria-label="killerwhalee 처음으로">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><ellipse cx="20.5" cy="12" rx="5.2" ry="2.6" transform="rotate(-18 20.5 12)" fill="var(--bg)"/><path d="M5 22c6 3.4 15 3.4 22-1.2-3 4.8-8.6 6.8-13.6 6.2C9.6 26.6 6.6 24.8 5 22z" fill="var(--bg)"/></svg>
+    <span>killerwhalee</span>
+  </a>
+  <nav aria-label="바로가기">
+    <a href="/#work">프로젝트</a>
+    <a href="https://github.com/killerwhalee" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="wrap d-hero" aria-labelledby="title">
+    <a class="back" href="/#work">모든 프로젝트</a>
+    <p class="d-no mono">04 / 04</p>
+    <h1 id="title">초경량 주문 키오스크</h1>
+    <p class="d-lede">노트북 한 대와 태블릿 몇 대로, 하루짜리 주문 시스템을 바로 엽니다.</p>
+    <div class="d-meta"><span class="status try">아래에서 바로 써 보기</span><span class="mono">Node.js · 오픈 소스</span></div>
+    <div class="links">
+      <a class="btn" href="https://github.com/killerwhalee/kiosk" target="_blank" rel="noopener">GitHub에서 받기</a>
+    </div>
+  </section>
+
+  <section class="wrap d-sec" aria-labelledby="demo-title">
+    <h2 class="sec-title" id="demo-title">데모</h2>
+    <div class="demo" data-demo>
+      <div class="demo-bar">
+        <div class="tabs" role="tablist" aria-label="데모 화면">
+          <button role="tab" data-view="order" aria-selected="true">주문 입력</button>
+          <button role="tab" data-view="station1" aria-selected="false">음료 주방</button>
+          <button role="tab" data-view="station2" aria-selected="false">요리 주방</button>
+          <button role="tab" data-view="admin" aria-selected="false">관리자</button>
+        </div>
+        <div class="demo-actions">
+          <button class="btn" type="button" data-reset>처음 상태로</button>
+          <a class="btn" href="/kiosk/demo/" target="_blank" rel="noopener">새 탭에서</a>
+        </div>
+      </div>
+      <div class="panes">
+        <div class="pane" data-view="order"><iframe title="키오스크 데모: 주문 입력" data-src="/kiosk/demo/order.html"></iframe></div>
+        <div class="pane" data-view="station1" hidden><iframe title="키오스크 데모: 음료 주방" data-src="/kiosk/demo/station.html?id=1"></iframe></div>
+        <div class="pane" data-view="station2" hidden><iframe title="키오스크 데모: 요리 주방" data-src="/kiosk/demo/station.html?id=2"></iframe></div>
+        <div class="pane" data-view="admin" hidden><iframe title="키오스크 데모: 관리자" data-src="/kiosk/demo/admin.html"></iframe></div>
+      </div>
+      <p class="demo-help">주문 입력에서 테이블과 메뉴를 골라 보내면 주방 화면에 바로 나타납니다. 주방 화면은 “시작하기”를 누른 뒤 “주방 요청 → 서빙 완료”로 처리합니다. 이 데모는 서버 없이 이 브라우저 안에서만 돌고, 알림음은 꺼 둔 채로 시작합니다.</p>
+    </div>
+  </section>
+
+  <section class="wrap d-sec" aria-labelledby="about">
+    <h2 class="sec-title" id="about">무엇을 하나요</h2>
+    <div class="p-grid">
+      <div class="p-body">
+        <p>후원자 일일 찻집 하루를 위해 만들었습니다. 주문받는 태블릿에서 넣은 주문이 주방별로 나뉘어 각 서빙 담당의 화면에 바로 뜨고, 처리할 때까지 알림음과 깜빡임이 이어집니다.</p>
+      </div>
+      <ul class="points flush">
+        <li><strong>설치할 것은 Node.js 하나</strong> — 외부 패키지, 데이터베이스, 빌드 과정이 없습니다.</li>
+        <li><strong>인터넷 없이</strong> 같은 와이파이 안에서 동작합니다. 태블릿에는 앱을 깔지 않고 브라우저로 주소만 엽니다.</li>
+        <li><strong>메뉴·가격·테이블·주방</strong>은 <code>config.json</code> 파일 하나로 바꿉니다.</li>
+        <li><strong>연결이 흔들려도</strong> 주문이 두 번 들어가거나 사라지지 않습니다.</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="다른 프로젝트">
+    <a class="prev" href="/matda/"><span class="mono">이전 · 03</span><b>마따</b></a>
+  </nav>
+</main>
+
+<footer class="wrap foot">
+  <span>killerwhalee</span>
+  <a href="https://github.com/killerwhalee" target="_blank" rel="noopener">github.com/killerwhalee</a>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

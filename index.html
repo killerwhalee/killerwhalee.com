@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>killerwhalee</title>
-<meta name="description" content="killerwhalee가 만들고 직접 운영하는 서비스: zindo, monkey, 마따, 초경량 주문 키오스크, PIAST.">
+<meta name="description" content="killerwhalee가 만들고 직접 운영하는 서비스: zindo, monkey, 마따, 초경량 주문 키오스크.">
 <meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B0D0F" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="killerwhalee">
-<meta property="og:description" content="만들고 직접 운영하는 것들 — zindo, monkey, 마따, 초경량 주문 키오스크, PIAST">
+<meta property="og:description" content="만들고 직접 운영하는 것들 — zindo, monkey, 마따, 초경량 주문 키오스크">
 <meta property="og:url" content="https://killerwhalee.com/">
 <meta property="og:image" content="https://killerwhalee.com/assets/img/monkey-dashboard.webp">
 <link rel="canonical" href="https://killerwhalee.com/">
@@ -27,7 +27,7 @@
   </a>
   <nav aria-label="바로가기">
     <a href="#work">프로젝트</a>
-    <a href="https://github.com/killerwhalee">GitHub</a>
+    <a href="https://github.com/killerwhalee" target="_blank" rel="noopener">GitHub</a>
   </nav>
 </header>
 
@@ -41,245 +41,38 @@
   <section class="wrap" id="work" aria-labelledby="work-title">
     <div class="index-head">
       <h2 id="work-title">만들고 운영하는 것들</h2>
-      <p class="mono">5</p>
+      <p class="mono">4</p>
     </div>
     <ol class="index">
-      <li><a href="#zindo">
+      <li><a href="/zindo/">
         <span class="no mono">01</span><span class="name">zindo</span>
         <span class="what">학원·공부방을 위한 진도 기록장</span>
         <span class="status live">운영 중</span><span class="where mono">zindo.kr</span>
       </a></li>
-      <li><a href="#monkey">
+      <li><a href="/monkey/">
         <span class="no mono">02</span><span class="name">monkey</span>
         <span class="what">무작위로 매매하는 원숭이 수백 마리의 주식 실험</span>
         <span class="status live">실험 중</span><span class="where mono">monkey.killerwhalee.com</span>
       </a></li>
-      <li><a href="#matda">
+      <li><a href="/matda/">
         <span class="no mono">03</span><span class="name">마따</span>
         <span class="what">눈 감고도 남기는 음성 메모 (iPhone)</span>
         <span class="status soon">출시 준비</span><span class="where mono">matda.kr</span>
       </a></li>
-      <li><a href="#kiosk">
+      <li><a href="/kiosk/">
         <span class="no mono">04</span><span class="name">주문 키오스크</span>
         <span class="what">노트북 한 대로 여는 행사용 주문 시스템</span>
-        <span class="status try">데모</span><span class="where mono">kiosk/demo</span>
-      </a></li>
-      <li><a href="#piast">
-        <span class="no mono">05</span><span class="name">PIAST</span>
-        <span class="what">KAIST 피아노 동아리 관리 사이트</span>
-        <span class="status build">다시 만드는 중</span><span class="where mono">kaist-piast.club</span>
+        <span class="status try">데모</span><span class="where mono">브라우저에서 체험</span>
       </a></li>
     </ol>
   </section>
 
-  <!-- 01 zindo -->
-  <section class="wrap project" id="zindo" aria-labelledby="zindo-title">
-    <div class="p-head">
-      <span class="no mono">01</span>
-      <h2 id="zindo-title">zindo</h2>
-      <span class="status live">운영 중</span>
-    </div>
-    <div class="p-grid">
-      <div class="p-body">
-        <p class="lede">선생님이 진도를 적으면, 그 기록이 그대로 학부모에게 보낼 가정통신문이 됩니다.</p>
-        <p>학원과 공부방이 교실·학생·교재를 등록하고, 선생님은 수업 중에 학생별로 공부한 쪽수와 메모를 남깁니다. 쌓인 기록은 학생별 통계와 인쇄용 가정통신문(PDF)으로 바로 나옵니다.</p>
-        <ul class="points">
-          <li><strong>계정 없이 기록</strong> — 선생님은 기관 암호나 QR 코드만으로 들어와 바로 적습니다.</li>
-          <li><strong>교재는 ISBN으로</strong> — 책 검색으로 교재를 찾아 등록합니다.</li>
-          <li><strong>미성년자 개인정보</strong> — 기관 간 데이터 격리, 암호화 백업, 약관·처리방침 버전 관리를 제품의 일부로 다룹니다.</li>
-          <li><strong>40대 이상 기준 크기</strong> — 버튼 48px, 글자 17px. 휴대폰 한 손으로 씁니다.</li>
-        </ul>
-        <dl class="facts">
-          <dt>스택</dt><dd>Django 6 · DRF · PostgreSQL / React · TypeScript · Tailwind · shadcn/ui</dd>
-          <dt>운영</dt><dd>직접 관리하는 서버, Cloudflare Tunnel, 매일 암호화 백업</dd>
-        </dl>
-        <div class="links">
-          <a class="btn primary" href="https://zindo.kr">zindo.kr 열기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-      <div>
-        <div class="shots">
-          <figure><div class="phone"><img src="assets/img/zindo-1-students.webp" width="480" height="981" loading="lazy" alt="zindo 교실의 학생 목록 화면"></div><figcaption>교실별 학생</figcaption></figure>
-          <figure><div class="phone"><img src="assets/img/zindo-3-record.webp" width="480" height="981" loading="lazy" alt="공부한 날과 쪽수를 적는 진도 기록 화면"></div><figcaption>진도 적기</figcaption></figure>
-          <figure><div class="phone"><img src="assets/img/zindo-5-stats.webp" width="480" height="981" loading="lazy" alt="학생별 학습 통계 화면"></div><figcaption>학생별 통계</figcaption></figure>
-        </div>
-        <p class="caption">화면의 기관·학생은 모두 가상 데이터입니다.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 02 monkey -->
-  <section class="wrap project" id="monkey" aria-labelledby="monkey-title">
-    <div class="p-head">
-      <span class="no mono">02</span>
-      <h2 id="monkey-title">monkey</h2>
-      <span class="status live">2차 실험 중</span>
-    </div>
-    <div class="p-grid wide-visual">
-      <div class="p-body">
-        <p class="lede">아무것도 모르는 원숭이가 무작위로 주식을 사고팔면, 몇 마리나 시장을 이길까?</p>
-        <p>가상의 원숭이 트레이더 수백 마리가 무작위 시각에, 무작위 종목을, 무작위 수량으로 사고팝니다. 가정으로 계산하지 않고 한국투자증권 <strong>모의투자</strong> 계좌로 실제 한국 시장에 주문을 냅니다.</p>
-        <p>원숭이마다 성급함(주문 주기)과 배짱(주문 수량) 성향이 있고, 부모의 성향을 물려받아 태어나며, 3거래일 동안 거래가 없으면 죽습니다.</p>
-        <dl class="facts">
-          <dt>스택</dt><dd>Django 6 · Celery · Channels(WebSocket) · PostgreSQL · Redis / React 19 · TypeScript</dd>
-          <dt>운영</dt><dd>장중 실시간 대시보드, 장 마감 뒤 체결 대사·정비 자동화</dd>
-        </dl>
-        <div class="links">
-          <a class="btn primary" href="https://monkey.killerwhalee.com">대시보드 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="btn" href="https://github.com/killerwhalee/monkey-backend">백엔드 코드</a>
-          <a class="btn" href="https://github.com/killerwhalee/monkey-frontend">프런트엔드 코드</a>
-        </div>
-      </div>
-      <figure style="margin:0">
-        <div class="screen">
-          <div class="screen-bar"><i></i><i></i><i></i><span class="mono">monkey.killerwhalee.com</span></div>
-          <img src="assets/img/monkey-dashboard.webp" width="1280" height="820" loading="lazy" alt="원숭이 지수 캔들 차트와 운영 중인 원숭이 수를 보여 주는 monkey 공개 대시보드">
-        </div>
-        <figcaption class="caption">공개 대시보드 — 원숭이 지수(기준 1,000)와 살아 있는 원숭이. 2026-11-01 장 마감 뒤 화면.</figcaption>
-      </figure>
-    </div>
-
-    <div class="stats" aria-label="1차 실험 결과">
-      <div class="stat"><b>172,493</b><span>낸 주문 (체결 122,566)</span></div>
-      <div class="stat"><b>194</b><span>거래한 원숭이</span></div>
-      <div class="stat"><b>54.1%</b><span>수익을 낸 원숭이 비율</span></div>
-      <div class="stat"><b>+0.39%</b><span>원숭이 지수 · 같은 기간 KOSPI −22.3%, KRX 동일가중 −3.7%</span></div>
-    </div>
-    <p class="stats-note">1차 실험 · 2026-06-22 ~ 2026-09-23 · 66거래일 · 모의투자 계좌, 실제 돈은 오가지 않습니다</p>
-    <div class="verdict">
-      <b>1차 결론: 전략이 아니라 운.</b>
-      <p>성향은 수익률이 흩어지는 폭만 바꿨고, 순위는 태어난 시점과 극단적인 거래 한두 번이 정했습니다. KOSPI를 크게 앞선 것은 지수의 가중 방식 차이 때문이고, 거래세와 수수료를 빼면 동일가중 시장보다 약 2%p 뒤집니다.</p>
-    </div>
-  </section>
-
-  <!-- 03 마따 -->
-  <section class="wrap project" id="matda" aria-labelledby="matda-title">
-    <div class="p-head">
-      <span class="no mono">03</span>
-      <h2 id="matda-title">마따 <small>matda</small></h2>
-      <span class="status soon">App Store 출시 준비</span>
-    </div>
-    <div class="p-grid">
-      <div class="p-body">
-        <p class="lede">눈 감고도 남기는 초소형 음성 메모.</p>
-        <p>누워서 불을 끈 채, 폰을 엎어 둔 채 생각난 일을 말로 남깁니다. 나중에 카드처럼 넘겨 보고, 스와이프해서 지웁니다. 쓰는 순간에는 분류도, 날짜도, 알림도 붙이지 않습니다.</p>
-        <ul class="points">
-          <li><strong>화면을 보지 않아도 끝까지</strong> — 뒷면 두 번 탭이나 Siri로 시작하고, 시작·저장·실패를 소리와 진동으로 알려 줍니다. 효과음은 직접 녹음했습니다.</li>
-          <li><strong>데이터는 기기 밖으로 나가지 않습니다</strong> — 서버가 없고, 받아쓰기는 기기 안에서, 음성 원본은 저장하지 않습니다.</li>
-          <li><strong>Mac 없이 만든 iOS 앱</strong> — GitHub Actions의 macOS에서 빌드해 실기기에 설치하며 개발했습니다.</li>
-        </ul>
-        <dl class="facts">
-          <dt>스택</dt><dd>Swift 6 · SwiftUI · SwiftData · WidgetKit · App Intents · Speech</dd>
-          <dt>지원</dt><dd>iOS 18 이상 · 위젯 · 공유 확장 · 단축어</dd>
-        </dl>
-        <div class="links">
-          <a class="btn primary" href="https://matda.kr">matda.kr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="btn" href="https://matda.kr/support">지원</a>
-          <a class="btn" href="https://matda.kr/privacy">개인정보 처리방침</a>
-        </div>
-      </div>
-      <div class="shots">
-        <figure><div class="phone"><img src="assets/img/matda-1-main.webp" width="480" height="1043" loading="lazy" alt="빠르게 남기고 빠르게 지우는 메모 — 카드처럼 쌓인 메모 목록"></div></figure>
-        <figure><div class="phone"><img src="assets/img/matda-2-ways.webp" width="480" height="1043" loading="lazy" alt="뒷면 탭, Siri, 위젯 등 메모를 남기는 여러 방법"></div></figure>
-        <figure><div class="phone"><img src="assets/img/matda-4-swipe.webp" width="480" height="1043" loading="lazy" alt="스와이프해서 메모를 지우는 화면"></div></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 키오스크 -->
-  <section class="wrap project" id="kiosk" aria-labelledby="kiosk-title">
-    <div class="p-head">
-      <span class="no mono">04</span>
-      <h2 id="kiosk-title">초경량 주문 키오스크</h2>
-      <span class="status try">아래에서 바로 써 보기</span>
-    </div>
-    <div class="p-grid">
-      <div class="p-body">
-        <p class="lede">노트북 한 대와 태블릿 몇 대로, 하루짜리 주문 시스템을 바로 엽니다.</p>
-        <p>후원자 일일 찻집 하루를 위해 만들었습니다. 주문받는 태블릿에서 넣은 주문이 주방별로 나뉘어 각 서빙 담당의 화면에 바로 뜨고, 처리할 때까지 알림음과 깜빡임이 이어집니다.</p>
-      </div>
-      <div class="p-body">
-        <ul class="points" style="margin-top:0">
-          <li><strong>설치할 것은 Node.js 하나</strong> — 외부 패키지, 데이터베이스, 빌드 과정이 없습니다.</li>
-          <li><strong>인터넷 없이</strong> 같은 와이파이 안에서 동작합니다. 태블릿에는 앱을 깔지 않고 브라우저로 주소만 엽니다.</li>
-          <li><strong>메뉴·가격·테이블·주방</strong>은 <code>config.json</code> 파일 하나로 바꿉니다.</li>
-          <li><strong>연결이 흔들려도</strong> 주문이 두 번 들어가거나 사라지지 않습니다.</li>
-        </ul>
-        <div class="links">
-          <a class="btn" href="https://github.com/killerwhalee/kiosk">GitHub에서 받기</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="demo" data-demo>
-      <div class="demo-bar">
-        <div class="tabs" role="tablist" aria-label="데모 화면">
-          <button role="tab" data-view="order" aria-selected="true">주문 입력</button>
-          <button role="tab" data-view="station1" aria-selected="false">음료 주방</button>
-          <button role="tab" data-view="station2" aria-selected="false">요리 주방</button>
-          <button role="tab" data-view="admin" aria-selected="false">관리자</button>
-        </div>
-        <div class="demo-actions">
-          <button class="btn" type="button" data-reset>처음 상태로</button>
-          <a class="btn" href="kiosk/demo/" target="_blank" rel="noopener">새 창에서</a>
-        </div>
-      </div>
-      <div class="panes">
-        <div class="pane" data-view="order"><iframe title="키오스크 데모: 주문 입력" data-src="kiosk/demo/order.html"></iframe></div>
-        <div class="pane" data-view="station1" hidden><iframe title="키오스크 데모: 음료 주방" data-src="kiosk/demo/station.html?id=1"></iframe></div>
-        <div class="pane" data-view="station2" hidden><iframe title="키오스크 데모: 요리 주방" data-src="kiosk/demo/station.html?id=2"></iframe></div>
-        <div class="pane" data-view="admin" hidden><iframe title="키오스크 데모: 관리자" data-src="kiosk/demo/admin.html"></iframe></div>
-      </div>
-      <p class="demo-help">주문 입력에서 테이블과 메뉴를 골라 보내면 주방 화면에 바로 나타납니다. 주방 화면은 “시작하기”를 누른 뒤 “주방 요청 → 서빙 완료”로 처리합니다. 이 데모는 서버 없이 이 브라우저 안에서만 돌고, 알림음은 꺼 둔 채로 시작합니다.</p>
-    </div>
-  </section>
-
-  <!-- 05 PIAST -->
-  <section class="wrap project" id="piast" aria-labelledby="piast-title">
-    <div class="p-head">
-      <span class="no mono">05</span>
-      <h2 id="piast-title">PIAST</h2>
-      <span class="status build">다시 만드는 중</span>
-    </div>
-    <div class="p-grid">
-      <div class="p-body">
-        <p class="lede">KAIST 피아노 동아리 PIAST의 회원·연주회·레슨·정모를 관리하는 사이트.</p>
-        <p>동아리 운영을 위해 직접 만든 전용 도구입니다. 지금 운영 중인 것은 PHP로 된 이전 버전이고, React와 Django로 처음부터 다시 만들고 있습니다. 이전 버전에서 할 수 있던 일은 하나도 빠뜨리지 않고, 부원은 휴대폰으로 빠르게 확인하고 신청하게 하는 것이 목표입니다.</p>
-        <dl class="facts">
-          <dt>지금</dt><dd>PHP 8 · MariaDB · Apache</dd>
-          <dt>새 버전</dt><dd>Django 6 · DRF · PostgreSQL / React · Vite · shadcn/ui</dd>
-        </dl>
-        <div class="links">
-          <a class="btn" href="https://kaist-piast.club">kaist-piast.club</a>
-        </div>
-      </div>
-      <dl class="feature-sheet">
-        <div><dt>정모</dt><dd>목요일 정기 모임의 회차별 진행과 출석</dd></div>
-        <div><dt>연주회</dt><dd>정기·테마 연주회 신청, 테마 투표</dd></div>
-        <div><dt>레슨</dt><dd>선생·학생 역할을 잇는 레슨 관리</dd></div>
-        <div><dt>회원</dt><dd>기수, 친목조, OB·휴동 상태, 임원 점수</dd></div>
-        <div><dt>임원</dt><dd>회장·악장·임원별로 나뉜 관리 메뉴</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="wrap more" aria-labelledby="more-title">
-    <h2 id="more-title">그 밖에</h2>
-    <ul>
-      <li>
-        <b>cfbpy</b>
-        <span>CFB(Compound File Binary) 파일을 zip처럼 풀고 묶는 Python 패키지. MIT 라이선스.</span>
-        <span class="l"><a href="https://github.com/killerwhalee/cfbpy">GitHub</a><a href="https://pypi.org/project/cfbpy/">PyPI</a></span>
-      </li>
-    </ul>
-  </section>
 </main>
 
 <footer class="wrap foot">
   <span>killerwhalee</span>
-  <a href="https://github.com/killerwhalee">github.com/killerwhalee</a>
+  <a href="https://github.com/killerwhalee" target="_blank" rel="noopener">github.com/killerwhalee</a>
 </footer>
 
-<script src="assets/site.js" defer></script>
 </body>
 </html>
