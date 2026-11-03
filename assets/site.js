@@ -36,7 +36,11 @@
     // 넓은 화면에서는 주문 화면이 늘 왼쪽에 있으므로, 오른쪽에 보일 화면만 고른다.
     if (wide.matches && view === 'order') view = 'station1';
     current = view;
-    for (const t of tabs) t.setAttribute('aria-selected', String(t.dataset.view === view));
+    for (const t of tabs) {
+      const on = t.dataset.view === view;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1; // 탭 묶음은 Tab 한 번으로 들어가고, 안에서는 화살표로 옮긴다.
+    }
     for (const p of panes) {
       const visible = p.dataset.view === view || (wide.matches && p.dataset.view === 'order');
       p.hidden = !visible;
@@ -46,10 +50,14 @@
 
   tabs.forEach((t) => t.addEventListener('click', () => show(t.dataset.view)));
   demo.querySelector('[role="tablist"]').addEventListener('keydown', (e) => {
-    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) return;
+    e.preventDefault();
     const visibleTabs = tabs.filter((t) => getComputedStyle(t).display !== 'none');
     const i = visibleTabs.findIndex((t) => t.dataset.view === current);
-    const next = visibleTabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + visibleTabs.length) % visibleTabs.length];
+    const n = visibleTabs.length;
+    const next = e.key === 'Home' ? visibleTabs[0]
+      : e.key === 'End' ? visibleTabs[n - 1]
+      : visibleTabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + n) % n];
     show(next.dataset.view);
     next.focus();
   });
